@@ -26,7 +26,7 @@ without recompiling<br />
 
 ### Abstract Factory Design Pattern 
 #### Uses 
-Is often used when there is a need to use
+• Is often used when there is a need to use
 different sets of objects and where those
 objects could be added or changed some
 time during the lifetime of an application
@@ -39,8 +39,22 @@ and javax.xml.xpath.XPathFactory
 the possibility of unnecessary complexity and
 extra work during the initial implementation
 
-
-
+### Builder Pattern 
+#### Uses 
+• Is often used when you want to hide the
+actual creation process from clients
+• The construction process should allow different
+representations of the resulting object
+#### Examples 
+java.lang.StringBuilder#append and
+java.lang.StringBuffer#append
+#### UML 
+ ![image](https://user-images.githubusercontent.com/60134186/173241689-d78191b3-9887-4548-981d-9a5b69de9efd.png)
+#### DrawBacks
+• “It does create more code (and could
+introduce more complexity) in the DTO than if
+you had for example contructor arguments
+and/or setters/getters.”1
 
 
 
