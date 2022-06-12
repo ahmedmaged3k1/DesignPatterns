@@ -21,6 +21,7 @@ import com.example.designpatterns.structuralDesignPatterns.bridgePattern.CircleB
 import com.example.designpatterns.structuralDesignPatterns.bridgePattern.GreenCircle;
 import com.example.designpatterns.structuralDesignPatterns.bridgePattern.RedCircle;
 import com.example.designpatterns.structuralDesignPatterns.bridgePattern.ShapeBridge;
+import com.example.designpatterns.structuralDesignPatterns.compositePattern.Employee;
 import com.example.designpatterns.structuralDesignPatterns.decoraterPattern.DecoratorCircle;
 import com.example.designpatterns.structuralDesignPatterns.decoraterPattern.DecoratorShape;
 import com.example.designpatterns.structuralDesignPatterns.decoraterPattern.DecoratorSquare;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         singletonPattern();
         bridgePattern();
         decoratorPattern();
+        compositePattern();
     }
 
     private  void factoryPattern()
@@ -111,11 +113,26 @@ public class MainActivity extends AppCompatActivity {
         DecoratorShape circle = new DecoratorCircle();
         DecoratorShape redCircle = new RedShapeDecorator(new DecoratorCircle());
         DecoratorShape redRectangle = new RedShapeDecorator(new DecoratorSquare());
-        System.out.println("Circle with normal border");
         circle.draw();
-        System.out.println("\nCircle of red border");
         redCircle.draw();
-        System.out.println("\nSquare of red border");
         redRectangle.draw();
     }
+    private  void compositePattern() {
+        //create a composite object
+        Employee CEO = new Employee("John", "CEO", 30000);
+        Employee headSales = new Employee("Robert", "Head Sales", 20000);
+        Employee headMarketing = new Employee("Michel", "Head Marketing",
+                20000);
+        Employee clerk1 = new Employee("Laura", "Marketing", 10000);
+        Employee clerk2 = new Employee("Bob", "Marketing", 10000);
+        Employee salesExecutive1 = new Employee("Richard", "Sales", 10000);
+        Employee salesExecutive2 = new Employee("Rob", "Sales", 10000);
+        CEO.add(headSales);
+        CEO.add(headMarketing);
+        headSales.add(salesExecutive1);
+        headSales.add(salesExecutive2);
+        headMarketing.add(clerk1);
+        headMarketing.add(clerk2);
+    }
+
 }
