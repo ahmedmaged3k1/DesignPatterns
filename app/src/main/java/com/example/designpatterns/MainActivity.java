@@ -16,6 +16,7 @@ import com.example.designpatterns.creationalDesignPatterns.prototypePattern.shap
 import com.example.designpatterns.creationalDesignPatterns.prototypePattern.shapes.PrototypeShape;
 import com.example.designpatterns.creationalDesignPatterns.prototypePattern.shapes.Rectangle;
 import com.example.designpatterns.creationalDesignPatterns.prototypePattern.shapes.Sphere;
+import com.example.designpatterns.creationalDesignPatterns.singeltonPattern.Singleton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         builderPattern();
         abstractFactoryPattern();
         factoryPattern();
+        singletonPattern();
     }
 
     private  void factoryPattern()
@@ -77,5 +79,10 @@ public class MainActivity extends AppCompatActivity {
         PrototypeShape clonedShape3 = (PrototypeShape) ShapeCache.getShape("3");
         clonedShape3.draw();
         Log.d(TAG, "Prototype Shape : " + clonedShape3.getType());
+    }
+    private  void singletonPattern()
+    {
+        //create a singleton object
+        Singleton singleton = Singleton.getInstance();
     }
 }
