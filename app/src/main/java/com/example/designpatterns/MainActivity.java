@@ -21,6 +21,10 @@ import com.example.designpatterns.structuralDesignPatterns.bridgePattern.CircleB
 import com.example.designpatterns.structuralDesignPatterns.bridgePattern.GreenCircle;
 import com.example.designpatterns.structuralDesignPatterns.bridgePattern.RedCircle;
 import com.example.designpatterns.structuralDesignPatterns.bridgePattern.ShapeBridge;
+import com.example.designpatterns.structuralDesignPatterns.decoraterPattern.DecoratorCircle;
+import com.example.designpatterns.structuralDesignPatterns.decoraterPattern.DecoratorShape;
+import com.example.designpatterns.structuralDesignPatterns.decoraterPattern.DecoratorSquare;
+import com.example.designpatterns.structuralDesignPatterns.decoraterPattern.RedShapeDecorator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         factoryPattern();
         singletonPattern();
         bridgePattern();
+        decoratorPattern();
     }
 
     private  void factoryPattern()
@@ -45,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
         Shape rectangle = shapeFactory.getShape(1);
         Shape  circle = shapeFactory.getShape(1);
         Shape  sphere = shapeFactory.getShape(1);
-
+        sphere.draw();
+        rectangle.draw();
         circle.draw();
 
     }
@@ -98,5 +104,18 @@ public class MainActivity extends AppCompatActivity {
         ShapeBridge greenCircle = new CircleBridge(100,100, 10, new GreenCircle());
         redCircle.draw();
         greenCircle.draw();
+    }
+    private void decoratorPattern()
+    {
+        //create a decorator object
+        DecoratorShape circle = new DecoratorCircle();
+        DecoratorShape redCircle = new RedShapeDecorator(new DecoratorCircle());
+        DecoratorShape redRectangle = new RedShapeDecorator(new DecoratorSquare());
+        System.out.println("Circle with normal border");
+        circle.draw();
+        System.out.println("\nCircle of red border");
+        redCircle.draw();
+        System.out.println("\nSquare of red border");
+        redRectangle.draw();
     }
 }
