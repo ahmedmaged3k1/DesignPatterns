@@ -1,6 +1,6 @@
 # DesignPatterns 
 
-This repository contains most famous desing patterns implemented in java
+This repository contains most famous desing patterns implemented in java inside an android project 
 
 ## Creational Desing Patterns 
 
@@ -12,3 +12,6 @@ class of object it should create <br />
 from the same superclass/interface  <br />
 • When you want to insulate the client from the
 actual type that is being instantiated <br /> 
+
+### Abstract Factory Design Pattern 
+#### Uses 
