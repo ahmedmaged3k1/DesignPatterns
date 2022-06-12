@@ -17,6 +17,10 @@ import com.example.designpatterns.creationalDesignPatterns.prototypePattern.shap
 import com.example.designpatterns.creationalDesignPatterns.prototypePattern.shapes.Rectangle;
 import com.example.designpatterns.creationalDesignPatterns.prototypePattern.shapes.Sphere;
 import com.example.designpatterns.creationalDesignPatterns.singeltonPattern.Singleton;
+import com.example.designpatterns.structuralDesignPatterns.bridgePattern.CircleBridge;
+import com.example.designpatterns.structuralDesignPatterns.bridgePattern.GreenCircle;
+import com.example.designpatterns.structuralDesignPatterns.bridgePattern.RedCircle;
+import com.example.designpatterns.structuralDesignPatterns.bridgePattern.ShapeBridge;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         abstractFactoryPattern();
         factoryPattern();
         singletonPattern();
+        bridgePattern();
     }
 
     private  void factoryPattern()
@@ -85,5 +90,13 @@ public class MainActivity extends AppCompatActivity {
         //create a singleton object
         Singleton singleton = Singleton.getInstance();
         //get the singleton object
+    }
+    private void bridgePattern()
+    {
+        //create a bridge object
+        ShapeBridge redCircle = new CircleBridge(100,100, 10, new RedCircle());
+        ShapeBridge greenCircle = new CircleBridge(100,100, 10, new GreenCircle());
+        redCircle.draw();
+        greenCircle.draw();
     }
 }
