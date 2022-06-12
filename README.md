@@ -39,7 +39,7 @@ the possibility of unnecessary complexity and
 extra work during the initial implementation
 #### UML 
 ![image](https://user-images.githubusercontent.com/60134186/173241112-ab173c10-66c3-48b9-b38b-655a0842ef84.png)
-
+ <hr/>
 
 ### Builder Pattern 
 #### Uses 
@@ -57,7 +57,7 @@ you had for example contructor arguments
 and/or setters/getters.”1
 #### UML 
  ![image](https://user-images.githubusercontent.com/60134186/173241689-d78191b3-9887-4548-981d-9a5b69de9efd.png)
-
+ <hr/>
 
 ### Prototype Pattern 
 #### Uses 
@@ -78,7 +78,7 @@ have some internal objects with circular
 references, or which do not support copying
 #### UML 
  ![image](https://user-images.githubusercontent.com/60134186/173245655-969a71ef-c52c-4772-aa18-02466b643173.png)
-
+ <hr/>
 
 
 ### Singelton Pattern 
@@ -93,7 +93,10 @@ java.awt.Desktop#getDesktop()
 to avoid having global variables
 #### UML 
 ![image](https://user-images.githubusercontent.com/60134186/173246908-93eb8fdc-6cf4-4579-9023-e427722a9cc0.png)
-
+ <hr/>
+ 
+ 
+ 
 
 
 
