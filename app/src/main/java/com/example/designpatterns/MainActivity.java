@@ -6,7 +6,9 @@ import android.os.Bundle;
 
 import com.example.designpatterns.creationalDesignPatterns.abstractFactoryPattern.AbstractFactory;
 import com.example.designpatterns.creationalDesignPatterns.abstractFactoryPattern.FactoryProducer;
-import com.example.designpatterns.creationalDesignPatterns.factoryDesignPattern.Shape;
+import com.example.designpatterns.creationalDesignPatterns.builderFactoryPattern.Meal;
+import com.example.designpatterns.creationalDesignPatterns.builderFactoryPattern.MealBuilder;
+import com.example.designpatterns.creationalDesignPatterns.factoryDesignPattern.shapes.Shape;
 import com.example.designpatterns.creationalDesignPatterns.factoryDesignPattern.ShapeFactory;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,5 +34,17 @@ public class MainActivity extends AppCompatActivity {
         AbstractFactory shapeFactory = FactoryProducer.getFactory(2);
         Shape roundedCircle = shapeFactory.getShape(2);
 
+    }
+    private  void BuilderPattern()
+    {
+        MealBuilder mealBuilder = new MealBuilder();
+        Meal beefMeal = mealBuilder.prepareBeefMeal();
+        System.out.println("Veg Meal");
+        beefMeal.showItems();
+        System.out.println("Total Cost: " + beefMeal.getCost());
+        Meal chickenMeal = mealBuilder.prepareChickenMeal();
+        System.out.println("\n\nNon-Veg Meal");
+        chickenMeal.showItems();
+        System.out.println("Total Cost: " + chickenMeal.getCost());
     }
 }

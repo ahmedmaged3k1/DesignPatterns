@@ -1,8 +1,8 @@
-package com.example.designpatterns.creationalDesignPatterns.factoryDesignPattern;
+package com.example.designpatterns.creationalDesignPatterns.factoryDesignPattern.shapes;
 
 import android.util.Log;
 
-public class RoundedCircle implements  Shape{
+public class RoundedCircle implements Shape {
 
     private static final String TAG ="" ;
 

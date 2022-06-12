@@ -1,8 +1,8 @@
-package com.example.designpatterns.creationalDesignPatterns.factoryDesignPattern;
+package com.example.designpatterns.creationalDesignPatterns.factoryDesignPattern.shapes;
 
 import android.util.Log;
 
-public class Sphere  implements  Shape{
+public class Sphere  implements Shape {
     private static final String TAG ="" ;
 
     @Override
