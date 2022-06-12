@@ -26,3 +26,35 @@ without recompiling<br />
 
 ### Abstract Factory Design Pattern 
 #### Uses 
+Is often used when there is a need to use
+different sets of objects and where those
+objects could be added or changed some
+time during the lifetime of an application
+#### Examples 
+javax.xml.parsers.DocumentBuilderFactory
+and javax.xml.xpath.XPathFactory
+#### UML 
+![image](https://user-images.githubusercontent.com/60134186/173241112-ab173c10-66c3-48b9-b38b-655a0842ef84.png)
+#### DrawBacks
+the possibility of unnecessary complexity and
+extra work during the initial implementation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
