@@ -84,5 +84,6 @@ public class MainActivity extends AppCompatActivity {
     {
         //create a singleton object
         Singleton singleton = Singleton.getInstance();
+        //get the singleton object
     }
 }
