@@ -12,6 +12,17 @@ class of object it should create <br />
 from the same superclass/interface  <br />
 • When you want to insulate the client from the
 actual type that is being instantiated <br /> 
+#### Examples 
+java.util.Calendar,
+java.util.ResourceBundle and
+java.text.NumberFormat
+#### UML 
+![image](https://user-images.githubusercontent.com/60134186/173240403-fdb86958-24b8-4b8d-8e68-77f2d4c32ee0.png)
+#### DrawBacks
+• Requires keeping factory methods in sync with
+domain classes<br /> 
+• No way to change an implementing class
+without recompiling<br />  
 
 ### Abstract Factory Design Pattern 
 #### Uses 
