@@ -17,6 +17,7 @@ import com.example.designpatterns.creationalDesignPatterns.prototypePattern.shap
 import com.example.designpatterns.creationalDesignPatterns.prototypePattern.shapes.Rectangle;
 import com.example.designpatterns.creationalDesignPatterns.prototypePattern.shapes.Sphere;
 import com.example.designpatterns.creationalDesignPatterns.singeltonPattern.Singleton;
+import com.example.designpatterns.structuralDesignPatterns.bridgePattern.AudioPlayer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         abstractFactoryPattern();
         factoryPattern();
         singletonPattern();
+        adapterPattern();
     }
 
     private  void factoryPattern()
@@ -84,5 +86,15 @@ public class MainActivity extends AppCompatActivity {
     {
         //create a singleton object
         Singleton singleton = Singleton.getInstance();
+    }
+    private void adapterPattern()
+    {
+        //create an adapter object
+        AudioPlayer audioPlayer = new AudioPlayer();
+        audioPlayer.play("mp3", "beyond the horizon.mp3");
+                audioPlayer.play("mp4", "alone.mp4");
+        audioPlayer.play("vlc", "far far away.vlc");
+        audioPlayer.play("avi", "mind me.avi");
+        //create a client object
     }
 }
