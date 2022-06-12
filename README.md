@@ -1,24 +1,18 @@
 ## Behavioral Design Patterns 
 
-### Factory Design Pattern 
+### Chain of Responsibility Design Pattern 
 #### Uses 
-• When a class can't anticipate which kind of
-class of object it should create <br />
-• When the classes to be created are derived
-from the same superclass/interface  <br />
-• When you want to insulate the client from the
-actual type that is being instantiated <br /> 
+• When more than one object may handle a
+request, and the handler isn’t known <br /> 
+• When the set of objects that can handle a
+request should be specified dynamically<br /> 
 #### Examples 
-java.util.Calendar,
-java.util.ResourceBundle and
-java.text.NumberFormat
+java.util.logging.Logger#log()
 #### DrawBacks
-• Requires keeping factory methods in sync with
-domain classes<br /> 
-• No way to change an implementing class
-without recompiling<br /> 
+• No guarantee the request will be handled
+unless the chain is configured properly
 #### UML 
-![image](https://user-images.githubusercontent.com/60134186/173240403-fdb86958-24b8-4b8d-8e68-77f2d4c32ee0.png)
+![image](https://user-images.githubusercontent.com/60134186/173256099-858d671b-93de-4eca-a416-ac0187312fcb.png)
  <hr/>
 
 
