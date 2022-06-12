@@ -23,7 +23,7 @@ domain classes<br />
 without recompiling<br /> 
 #### UML 
 ![image](https://user-images.githubusercontent.com/60134186/173240403-fdb86958-24b8-4b8d-8e68-77f2d4c32ee0.png)
- 
+ <hr/>
 
 ### Abstract Factory Design Pattern 
 #### Uses 
