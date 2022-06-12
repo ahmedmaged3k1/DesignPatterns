@@ -2,7 +2,7 @@ package com.example.designpatterns.structuralDesignPatterns.adapterPattern;
 
 import android.util.Log;
 
-import com.example.designpatterns.structuralDesignPatterns.bridgePattern.MediaPlayer;
+
 
 public class AudioPlayer implements MediaPlayer {
 
