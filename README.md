@@ -77,6 +77,18 @@ have some internal objects with circular
 references, or which do not support copying
 
 
+### Singelton Pattern 
+#### Uses 
+• When only one instance or a specific number
+of instances of a class are permitted
+#### Examples 
+java.lang.Runtime#getRuntime()and
+java.awt.Desktop#getDesktop()
+#### UML 
+![image](https://user-images.githubusercontent.com/60134186/173246908-93eb8fdc-6cf4-4579-9023-e427722a9cc0.png)
+#### DrawBacks
+• Are generally used as a global instances à Try
+to avoid having global variables
 
 
 
