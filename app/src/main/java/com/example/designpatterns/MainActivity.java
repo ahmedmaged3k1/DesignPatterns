@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.designpatterns.behavioralDesignPatterns.iteratorPattern.IteratorInterface;
+import com.example.designpatterns.behavioralDesignPatterns.iteratorPattern.NameRepository;
 import com.example.designpatterns.creationalDesignPatterns.abstractFactoryPattern.AbstractFactory;
 import com.example.designpatterns.creationalDesignPatterns.abstractFactoryPattern.FactoryProducer;
 import com.example.designpatterns.creationalDesignPatterns.builderFactoryPattern.Meal;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         factoryPattern();
         singletonPattern();
         adapterPattern();
+        iteratorPattern();
     }
 
     private  void factoryPattern()
@@ -96,5 +99,13 @@ public class MainActivity extends AppCompatActivity {
         audioPlayer.play("vlc", "far far away.vlc");
         audioPlayer.play("avi", "mind me.avi");
         //create a client object
+    }
+    private void iteratorPattern() {
+        //create a collection object
+        NameRepository namesRepository = new NameRepository();
+        for(IteratorInterface iter = namesRepository.getIterator(); iter.hasNext();){
+            String name = (String) iter.next();
+            System.out.println("Name: " + name);
+        }
     }
 }
