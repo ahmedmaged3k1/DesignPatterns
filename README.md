@@ -7,7 +7,7 @@
 • Dependency Inversion<br /> 
 
 
-### Sngle Responibility Principle 
+### Single Responibility Principle 
 #### Defination  
 • States that a class should have ONLY ONE
 RESPONSIBILITY/FUNCTIONALITY<br /> 
