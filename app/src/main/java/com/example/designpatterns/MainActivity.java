@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.designpatterns.behavioralDesignPatterns.iteratorPattern.IteratorInterface;
+import com.example.designpatterns.behavioralDesignPatterns.iteratorPattern.NameRepository;
 import com.example.designpatterns.creationalDesignPatterns.abstractFactoryPattern.AbstractFactory;
 import com.example.designpatterns.creationalDesignPatterns.abstractFactoryPattern.FactoryProducer;
 import com.example.designpatterns.creationalDesignPatterns.builderFactoryPattern.Meal;
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         bridgePattern();
         decoratorPattern();
         compositePattern();
+        iteratorPattern();
     }
 
     private  void factoryPattern()
@@ -133,6 +136,14 @@ public class MainActivity extends AppCompatActivity {
         headSales.add(salesExecutive2);
         headMarketing.add(clerk1);
         headMarketing.add(clerk2);
+    }
+    private void iteratorPattern() {
+        //create a collection object
+        NameRepository namesRepository = new NameRepository();
+        for(IteratorInterface iter = namesRepository.getIterator(); iter.hasNext();){
+            String name = (String) iter.next();
+            System.out.println("Name: " + name);
+        }
     }
 
 }
