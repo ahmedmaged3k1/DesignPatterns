@@ -39,13 +39,21 @@ permanent objects”<br />
 #### Defination 
 • The problem with hard-coding is it makes the
 program tightly coupled to certain
-configuration or system
+configuration or system<br />
 • This complicates porting the application to
-another configuration or system
+another configuration or system<br />
  <hr/>
 
 
 
+ ### Boat Anchor
+#### Defination 
+• The problem with hard-coding is it makes the
+program tightly coupled to certain
+configuration or system
+• This complicates porting the application to
+another configuration or system
+ <hr/
 
 
 
